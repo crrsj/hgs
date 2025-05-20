@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Gabriel Soares - Quem Somos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset e Estilos Globais - Mesmo do site principal */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #004080;
+            --accent-color: #e6f0fa;
+            --text-color: #333;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Header - Mesmo estilo do site principal */
+        header {
+            background: var(--primary-color);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        /* Conteúdo Quem Somos */
+        .about-hero {
+            padding: 150px 2rem 5rem;
+            background: var(--accent-color);
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .medical-team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .team-member {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .member-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 3px solid var(--primary-color);
+        }
+
+        .technology-section {
+            background: var(--accent-color);
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tech-item {
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .tech-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+  /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #004080;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a {
+                padding: 1rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .menu-toggle {
+            display: block;
+            }
+        }
+           .menu-toggle {
+            display: block;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;           
+         
+
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="#" class="logo">HGS</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="quemsomos.html">Quem Somos</a></li>
+                <li><a href="contatos.html">Contato</a></li>
+            </ul>
+            <i class="fas fa-bars menu-toggle"></i>
+        </nav>
+    </header>
+
+    <section class="about-hero">
+        <h1>Quem Somos</h1>
+        <p>Compromisso com a excelência em saúde</p>
+    </section>
+
+    <div class="about-content">
+        <h2 class="section-title">Nossa Essência</h2>
+        <p class="lead-text">O Hospital Gabriel Soares é referência em atendimento médico-hospitalar, combinando tecnologia de ponta com atendimento humanizado. Nossa equipe multidisciplinar trabalha diariamente para oferecer cuidados integrais à saúde de nossos pacientes.</p>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <i class="fas fa-heartbeat value-icon"></i>
+                <h3>Missão</h3>
+                <p>Promover saúde e qualidade de vida através de atendimento médico excelente, com foco na segurança e satisfação do paciente.</p>
+            </div>
+
+            <div class="value-card">
+                <i class="fas fa-hand-holding-medical value-icon"></i>
+                <h3>Valores</h3>
+                <p>Ética, Inovação, Humanização e Compromisso com a Excelência formam a base de todas as nossas ações e decisões.</p>
+            </div>
+
+            <div class="value-card">
+                <i class="fas fa-stethoscope value-icon"></i>
+                <h3>Visão</h3>
+                <p>Ser reconhecido como centro médico de referência nacional, destacando-se pela qualidade assistencial e tecnológica.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Nossa Equipe</h2>
+        <div class="medical-team">
+            <div class="team-member">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkw3SHn0bYC1YG2s2r31BbkjAeNoOIG2YLvw&s" alt="Médico" class="member-photo">            
+                <h4>Dr. Carlos Albuquerque</h4>
+                <p>Diretor Clínico</p>
+            </div>
+            <div class="team-member">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWTkwxnjF8t6BuVZfFFWe1w76iCUTbardyeA&s" alt="Enfermeira" class="member-photo">
+                <h4>Dr. João Marcos</h4>
+                <p>Coordenadora de Enfermagem</p>
+            </div>
+            <div class="team-member">
+                <img src="https://images.icon-icons.com/2292/PNG/512/doctor_black_female_people_avatar_icon_141444.png" alt="Especialista" class="member-photo">
+                <h4>Dr. Marcelo Rios</h4>
+                <p>Chefe de Cirurgia</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="technology-section">
+        <div class="about-content">
+            <h2 class="section-title">Tecnologia e Estrutura</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <i class="fas fa-microscope tech-icon"></i>
+                    <h4>Laboratório Moderno</h4>
+                    <p>Equipamentos de última geração para diagnósticos precisos</p>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-procedures tech-icon"></i>
+                    <h4>Centro Cirúrgico</h4>
+                    <p>Salas equipadas com tecnologia robótica e monitoramento digital</p>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-x-ray tech-icon"></i>
+                    <h4>Diagnóstico por Imagem</h4>
+                    <p>Tomografia, Ressonância e equipamentos de alta resolução</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+     // Menu Mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+        
+           // Função para alternar o menu
+           function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Event Listeners
+        document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
+
+        // Fechar menu ao clicar em links
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+        });
+
+        // Fechar menu ao clicar fora
+        document.addEventListener('click', (e) => {
+            const navMenu = document.querySelector('.nav-menu');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        // Fechar menu ao rolar
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (Math.abs(currentScroll - lastScroll) > 50) {
+                document.querySelector('.nav-menu').classList.remove('active');
+                lastScroll = currentScroll;
+            }
+        });
+
+        // Scroll Suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animação ao Scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.service-card, .gallery-item').forEach((el) => {
+            observer.observe(el);
+        });
+           document.querySelector('.menu-toggle').addEventListener('click', () => {
+    document.querySelector('.nav-menu').classList.toggle('active');
+});
+
+    // Fechar menu ao clicar fora
+    document.addEventListener('click', (e) => {
+    const menu = document.querySelector('.nav-menu');
+    const toggle = document.querySelector('.menu-toggle');
+    
+    if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove('active');
+    }
+   });
+    </script>
+</body>
+</html>
